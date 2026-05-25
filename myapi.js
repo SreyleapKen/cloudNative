@@ -4,20 +4,30 @@ const e1 = require('express')
 // Create object of that server
 const app = e1();
 
-app.get('/view', (req, res) => {
-    res.send('INSIDE VIEW API..')
-})
-app.post('/view', (req, res) => {
-    res.send('INSIDE VIEW API..')
-})
+//Req API
+app.post('/registration', (req, res) => {
+    res.send('INSIDE REGISTRATION API..');
+});
 
-app.put('/view', (req, res) => {
-    res.send('INSIDE VIEW API..')
-})
+app.post('/login', (req, res) => {
+    res.send('INSIDE LOGIN API..');
+});
 
-app.delete('/view', (req, res) => {
-    res.send('INSIDE VIEW API..')
-})
+//Search API
+app.get('/search', (req, res) => {
+    res.send('INSIDE SEARCH API..');
+});
+
+//Update API
+app.put('/update', (req, res) => {
+    res.send('INSIDE UPDATE API..');
+});
+
+//Delete API
+app.delete('/delete', (req, res) => {
+    res.send('INSIDE DELETE API..');
+});
+
 //Start the express server. 5000 is the port num
 app.listen(5000, () =>
-    console.log('EXPRESS Server Started aat Port No: 5000'));
+    console.log('EXPRESS Server Started at Port No: 5000'));
